@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
+require("dotenv").config();
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -8,7 +9,7 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDUwA9aKCuyjw1s7tU0T__yQebvdz0MDns",
+  apiKey: process.env.FIREBASE_KEY,
   authDomain: "nextcounter-7dc60.firebaseapp.com",
   projectId: "nextcounter-7dc60",
   storageBucket: "nextcounter-7dc60.appspot.com",
@@ -23,4 +24,4 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firestore
 const db = getFirestore(app);
 
-export { db };;
+export { db };
