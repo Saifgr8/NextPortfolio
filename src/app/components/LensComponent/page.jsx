@@ -1,4 +1,6 @@
 "use client";
+
+
 import { useState } from "react";
 import { Lens } from "@/components/ui/lens";
 import Image from "next/image";
@@ -8,7 +10,7 @@ import gitImg from "../../../../public/GitHub.png";
 import LinkedInImg from "../../../../public/linkedIn.png";
 import Link from "next/link";
 import { SparklesCore } from "@/components/ui/sparkles";
-
+//export const dynamic = 'auto'; // Correct
 const data = [
   {
     img: LeetCode,
@@ -93,7 +95,6 @@ export function LensComponent() {
               </h2>
 
               <p className="text-neutral-300 mt-2">{item.desc}</p>
-              
             </div>
           </div>
         ))}
@@ -144,109 +145,5 @@ export function LensComponent() {
   );
 }
 
-{
-  /* <div className="relative">
-      <div className="relative w-full h-full flex flex-col items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <StarBg />
-        </div>
-        <div className="flex flex-row items-center  justify-center flex-wrap">
-          <h1 className="text-center  text-xl lg:text-4xl font-bold text-white dark:text-white z-50">
-             Professional Media
-          </h1>
-          <div className=" relative z-10 w-full flex lg:gap-8 lg:flex-row flex-col justify-around">
-            <div className="w-full relative rounded-3xl overflow-hidden  max-w-md mx-auto bg-gradient-to-br from-yellow-700 via-[#121318] to-black p-8 my-10">
-              <div>
-                <Lens hovering={hovering1} setHovering={setHovering1}>
-                  <Image
-                    src={LeetCode}
-                    alt="image"
-                    width={500}
-                    height={500}
-                    className="rounded-2xl"
-                  />
-                </Lens>
-                <motion.div
-                  animate={{
-                    filter: hovering1 ? "blur(2px)" : "blur(0px)",
-                  }}
-                  className="py-4 relative z-20"
-                >
-                  <Link href={`https://leetcode.com/u/Saifgr8/`}>
-                    <h2 className="text-white text-2xl text-center lg:text-left font-bold underline">
-                      Leetcode
-                    </h2>
-                  </Link>
-                  <p className="text-neutral-200 text-left  mt-4">
-                    Peek into my problem solving skills through competetive
-                    platforms like Leetcode
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-            <div className="w-full relative rounded-3xl overflow-hidden  max-w-md mx-auto bg-gradient-to-br from-yellow-700 via-[#121318] to-black p-8 my-10">
-              <div>
-                <Lens hovering={hovering2} setHovering={setHovering2}>
-                  <Image
-                    src={gitImg}
-                    alt="image"
-                    width={500}
-                    height={500}
-                    className="rounded-2xl"
-                  />
-                </Lens>
-                <motion.div
-                  animate={{
-                    filter: hovering2 ? "blur(2px)" : "blur(0px)",
-                  }}
-                  className="py-4 relative z-20"
-                >
-                  <Link href={`https://github.com/Saifgr8`}>
-                    <h2 className="text-white text-2xl text-center lg:text-left font-bold underline">
-                      GitHub
-                    </h2>
-                  </Link>
-                  <p className="text-neutral-200 text-left  mt-4">
-                    Browse my passion for development by browing my GitHub
-                    profile
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-            <div className="w-full relative lg:rounded-3xl overflow-hidden  max-w-md mx-auto bg-gradient-to-br from-yellow-700 via-[#121318] to-black p-8 lg:my-10">
-              <div>
-                <Lens hovering={hovering3} setHovering={setHovering3}>
-                  <Image
-                    src={LinkedInImg}
-                    alt="image"
-                    width={500}
-                    height={500}
-                    className="rounded-2xl"
-                  />
-                </Lens>
-                <motion.div
-                  animate={{
-                    filter: hovering3 ? "blur(2px)" : "blur(0px)",
-                  }}
-                  className="py-4 relative z-20"
-                >
-                  <Link href={`https://www.linkedin.com/in/sfud/`}>
-                    <h2 className="text-white text-2xl text-center lg:text-left font-bold underline">
-                      LinkedIn
-                    </h2>
-                  </Link>
-                  <p className="text-neutral-200 text-left  mt-4">
-                    {" "}
-                    Explore my professional network, career achievements, and
-                    industry connections on LinkedIn.
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> */
-}
 
-// Sorry about this but it looks coo
+

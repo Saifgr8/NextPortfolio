@@ -53,6 +53,7 @@ export const PinContainer = ({
 };
 
 export const PinPerspectiveSlate = ({ title }) => {
+  console.log(title);
   return (
     <motion.div className="pointer-events-none  w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className=" w-full h-full -mt-7 flex-none  inset-0">
@@ -61,9 +62,19 @@ export const PinPerspectiveSlate = ({ title }) => {
             target={"_blank"}
             className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 "
           >
-            <span className="relative z-20 px-4 text-white text-xl font-bold inline-block py-0.5">
-              {title} profile visits
-            </span>
+            {/* {title === null ? (
+              <span>Fetching...</span>
+            ) : (
+              <span className="relative z-20 px-4 text-white text-xl font-bold inline-block py-0.5">
+                {title} profile visits
+              </span>
+            )} */}
+            {!title && <span className="relative z-20 px-4 text-white text-xl font-bold inline-block py-0.5">
+                Fetching...
+              </span>}
+            {title && <span className="relative z-20 px-4 text-white text-xl font-bold inline-block py-0.5">
+                {title} profile visits
+              </span>}
 
             <span className="absolute  -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-yellow-400/0 via-yellow-400/90 to-yellow-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
           </a>
@@ -158,4 +169,3 @@ export const PinPerspectiveSlate = ({ title }) => {
     </motion.div>
   );
 };
-
