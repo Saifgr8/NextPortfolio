@@ -113,7 +113,7 @@ const Intro = () => {
       </div>
 
       {/* Bottom-centered text generation effects */}
-      <div className="flex flex-col items-center mb-6 z-10">
+      <div className="flex flex-col items-center lg:mb-6 mb-12 z-10">
         <TextGenerateEffect
           words={["Mohammad Saifuddin"]}
           delay={3200}
