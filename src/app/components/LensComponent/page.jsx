@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Lens } from "@/components/ui/lens";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import LeetCode from "../../../../public/LeetCode.png";
+import LeetCode from "../../../../public/Leetcode.png";
 import gitImg from "../../../../public/GitHub.png";
 import LinkedInImg from "../../../../public/linkedIn.png";
 import Link from "next/link";
