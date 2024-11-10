@@ -24,7 +24,7 @@ export function VortexDemo() {
         className="flex items-center flex-col justify-center px-2 md:px-10 w-full h-full"
       >
         <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
-          Did you like what you saw?
+          Like what you saw?
         </h2>
         <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
           Let&apos;s have a quick chat to connect and exchange ideas. I’d be

@@ -59,7 +59,7 @@ const About = () => {
           <span className="absolute  inset-y-7 text-slate-300 bg-transparent w-full text-center text-xl lg:text-3xl lg:pt-0 sm:pt-10 font-bold">
             Academics
           </span>
-          <div className="lg:h-fit h-screen mt-20">
+          <div className="h-fit lg:mt-10 mt-24">
             <AnimatedTestimonialsDemo />
           </div>
         </div>

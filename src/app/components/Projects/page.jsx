@@ -141,8 +141,11 @@ export function ThreeDCardDemo() {
     >
       <StartsBg />
       <div className="relative z-10 h-full w-full flex flex-row justify-center items-center">
-        <span className="text-slate-300 text-xl font-bold lg:text-3xl absolute -inset-y-4 text-center">
-          Explore My Projects!
+        <span className="text-slate-300 text-xl lg:text-3xl absolute -inset-y-4 text-center">
+          <span className="font-bold">Explore My Projects!</span> <br />{" "}
+          <span className="text-white text-sm font-sans">
+            ( Click for a 3D experience )
+          </span>
         </span>
 
         <BsChevronCompactLeft
@@ -154,8 +157,8 @@ export function ThreeDCardDemo() {
           } `}
           onClick={handleLeftClick}
         />
-        <CardContainer className="inter-var">
-          <CardBody className="mt-10 border-4 border-slate-300 bg-gradient-to-br from-transparent via-transparent to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[400px] lg:h-[500px] overflow-hidden hover:overflow-y-scroll rounded-xl p-6 ">
+        <CardContainer className="inter-var mt-10">
+          <CardBody className="mt-10 border-4 border-slate-300 bg-gradient-to-br from-transparent via-transparent to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[400px] lg:h-[500px] lg:overflow-hidden lg:hover:overflow-y-scroll overflow-y-scroll rounded-xl p-6 ">
             <CardItem
               translateZ="50"
               className="lg:text-xl text-base font-bold text-slate-400 dark:text-white"

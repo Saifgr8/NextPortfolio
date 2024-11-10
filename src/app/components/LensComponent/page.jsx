@@ -68,7 +68,7 @@ export function LensComponent() {
     <div className="w-full relative text-center lg:pt-10">
       <StarBg />
       <span className="text-slate-300 text-xl lg:text-3xl absolute  inset-x-2 font-bold z-0">
-        Professional media.<br />
+        Professional media<br />
         <span className="text-sm">( Click on image to zoom )</span>
       </span>
       {/* Desktop view */}
