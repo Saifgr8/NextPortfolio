@@ -8,33 +8,32 @@ const experienceData = [
     content: (
       <div>
         <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-xl text-xs">MindQube Ltd, Ldn</span>
-          <span className=" lg:text-base text-xs">Jan 2024 - Current</span>
+          <span className="lg:text-xl text-sm">MindQube Ltd, Ldn</span>
+          <span className=" lg:text-base text-sm">Jan 2024 - Current</span>
         </div>
         <ol className="list-decimal">
           <li>
             <p>
-              Developed and maintained responsive, user-centric applications
-              using React and Spring Boot, ensuring seamless functionality
-              across devices.
+              Built responsive, user-focused applications with React and Spring
+              Boot, ensuring cross-device functionality.
             </p>
           </li>
           <li>
             <p>
-              Collaborated within a cross-functional Scrum team to deliver
-              high-quality software solutions aligned with client requirements.
+              Worked in a cross-functional Scrum team to deliver client-focused,
+              high-quality software solutions.
             </p>
           </li>
           <li>
             <p>
-              Enhanced system security by implementing robust authentication and
-              authorization methods, optimizing user access control.
+              Strengthened system security with robust authentication and
+              authorization, enhancing user access control.
             </p>
           </li>
           <li>
             <p>
-              Streamlined CI/CD pipelines on Azure DevOps, improving deployment
-              efficiency and supporting agile project delivery.
+              Optimized CI/CD pipelines on Azure DevOps, boosting deployment
+              efficiency and enabling agile delivery.
             </p>
           </li>
         </ol>
@@ -46,33 +45,31 @@ const experienceData = [
     content: (
       <div>
         <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-xl text-xs">House of Fraser, Ldn</span>
-          <span className=" lg:text-base text-xs">
-            Oct 2022 - Sept 2023
-          </span>
+          <span className="lg:text-xl text-sm">House of Fraser, Ldn</span>
+          <span className=" lg:text-base text-sm">Oct 2022 - Sept 2023</span>
         </div>
         <ol className="list-decimal">
           <li>
             <p>
-              Delivered exceptional customer service, assisting customers with
-              purchases and enhancing their in-store experience.
+              Provided outstanding customer service, assisting with purchases
+              and elevating the in-store experience.
             </p>
           </li>
           <li>
             <p>
-              Collaborated with team members to ensure smooth store operations
+              Collaborated with team members to ensure smooth store operations.
             </p>
           </li>
           <li>
             <p>
-              Actively contributed to stock management, including sorting,
-              replenishing, and organizing inventory
+              Played a key role in stock management by sorting, replenishing,
+              and organizing inventory.
             </p>
           </li>
           <li>
             <p>
-              Demonstrated leadership and flexibility, adapting to both team
-              support and independent tasks to meet store standards effectively.
+              Exhibited leadership and adaptability by balancing team support
+              and independent tasks to uphold store standards.
             </p>
           </li>
         </ol>
@@ -84,29 +81,26 @@ const experienceData = [
     content: (
       <div>
         <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-xl text-xs">Accenture Ltd, Hyd</span>
-          <span className=" lg:text-base text-xs">
-            Feb 2021 - Jul 2022
-          </span>
+          <span className="lg:text-xl text-sm">Accenture Ltd, Hyd</span>
+          <span className=" lg:text-base text-sm">Feb 2021 - Jul 2022</span>
         </div>
         <ol className="list-decimal">
           <li>
             <p>
-              Worked extensively on creating and optimizing business processes
-              like hiring and compensation to streamline HR functions.
+              Streamlined HR functions by designing and optimizing business
+              processes for hiring and compensation.
             </p>
           </li>
           <li>
             <p>
-              Contributed to the Workday Payment Election system for Accenture
-              Philippines, improving payroll accuracy and employee experience.
+              Improved payroll accuracy and employee experience via Workday
+              Payment Election system enhancements.
             </p>
           </li>
           <li>
             <p>
-              Demonstrated analytical and problem-solving skills by supporting
-              complex integration tasks within the Workday platform, ensuring
-              smooth data flow and compliance.
+              Ensured smooth data flow and compliance by solving complex Workday
+              integration challenges.
             </p>
           </li>
         </ol>
@@ -135,7 +129,7 @@ const Expereince = () => {
 
         {/* Timeline Content */}
         <div className="relative z-10 w-full max-w-5xl p-6">
-          <h1 className="text-center  text-xl lg:text-3xl font-bold text-slate-300 dark:text-white mb-12">
+          <h1 className="text-center  text-xl lg:text-3xl font-bold text-slate-300 dark:text-white mt-12">
             Professional Journey
           </h1>
 

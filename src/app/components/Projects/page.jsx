@@ -138,12 +138,12 @@ export function ThreeDCardDemo() {
       <StartsBg />
       <div className="relative z-10 h-full w-full flex flex-row justify-center items-center">
         <span className="text-slate-300 text-xl font-bold lg:text-3xl absolute -inset-y-4 text-center">
-        Explore My Passion for dev!
+        Explore My Projects!
         </span>
 
         <BsChevronCompactLeft
           style={{ color: "#eab308" }}
-          className={`lg:h-40 lg:w-40 h-16 w-16 ${
+          className={`lg:h-32 lg:w-32 h-20 w-20 ${
             activeIndex > 0
               ? "animate-bounce cursor-pointer"
               : "animate-none cursor-not-allowed"
@@ -151,7 +151,7 @@ export function ThreeDCardDemo() {
           onClick={handleLeftClick}
         />
         <CardContainer className="inter-var">
-          <CardBody className="mt-10 bg-gradient-to-br from-transparent via-transparent to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[400px] lg:h-[500px] overflow-y-scroll rounded-xl p-6 no-scrollbar ">
+          <CardBody className="mt-10 border-4 border-slate-300 bg-gradient-to-br from-transparent via-transparent to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[400px] lg:h-[500px] overflow-hidden hover:overflow-y-scroll rounded-xl p-6 ">
             <CardItem
               translateZ="50"
               className="lg:text-xl text-base font-bold text-slate-400 dark:text-white"
@@ -209,7 +209,7 @@ export function ThreeDCardDemo() {
         </CardContainer>
         <BsChevronCompactRight
           style={{ color: "#eab308" }}
-          className={`lg:h-40 lg:w-40 h-16 w-16 ${
+          className={`lg:h-32 lg:w-32 h-20 w-20 ${
             activeIndex < data.length - 1
               ? "animate-bounce cursor-pointer"
               : "animate-none cursor-not-allowed"

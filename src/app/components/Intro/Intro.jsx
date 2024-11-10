@@ -58,15 +58,15 @@ const Intro = () => {
 
         messageTimeOut = setTimeout(() => {
           setMessage("");
-        }, 3000);
+        }, 2500);
       } else {
         setShowCount(data + 750);
         setMessage(
-          "The longer you scroll, the more your jaw drops!"
+          "Get ready to be amazed!"
         );
         messageTimeOut = setTimeout(() => {
           setMessage("");
-        }, 3000);
+        }, 2500);
       }
 
       dataTimeOut = setTimeout(() => {
@@ -87,7 +87,7 @@ const Intro = () => {
     };
   }, []);
 
-  console.log(showCount, message);
+  //console.log(showCount, message);
   return (
     <div
       className="relative h-screen w-full flex flex-col items-center justify-evenly"
@@ -99,12 +99,12 @@ const Intro = () => {
       {/* Top-centered item (e.g., a logo or other text) */}
       <div className="flex items-center justify-center w-full mt-10 z-10">
         {/* Placeholder for any additional item to add at the top */}
-        <h1 className="text-slate-300 text-base lg:text-xl lg:mt-10 mt-10">
+        <h1 className="text-slate-300 text-base lg:text-xl lg:mt-10 mt-12">
           Step into My World of Innovation and Code!
         </h1>
       </div>
       {message && (
-        <div className="bg-gradient-to-b rounded-2xl mt-4 text-sm lg:text-base from-yellow-400 via-yellow-500 to-yellow-600 animate-bounce p-2 shadow-2xl text-white">
+        <div className="bg-gradient-to-b rounded-2xl mt-6 text-sm lg:text-base from-yellow-400 via-yellow-500 to-yellow-600 animate-bounce py-1 px-2 shadow-2xl text-white">
           {message}
         </div>
       )}
@@ -113,17 +113,17 @@ const Intro = () => {
       </div>
 
       {/* Bottom-centered text generation effects */}
-      <div className="flex flex-col items-center lg:mb-6 mb-12 z-10">
+      <div className="flex flex-col items-center lg:mb-6 mb-12 z-10 mt-2">
         <TextGenerateEffect
           words={["Mohammad Saifuddin"]}
-          delay={3200}
+          delay={1000}
           textSize="text-2xl"
           font="font-bold"
         />
         <TextGenerateEffect
           words={words}
-          delay={4000}
-          textSize="text-sm"
+          delay={1200}
+          textSize="text-xs"
           font="italic"
         />
       </div>

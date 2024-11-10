@@ -27,7 +27,7 @@ export const Timeline = ({
     (<div
       className="w-full bg-transparent dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}>
-      <div className="max-w-7xl mx-auto py-16 px-4 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-3xl mb-4 text-slate-300 dark:text-white max-w-4xl">
           Lets walk through my journey
         </h2>
@@ -55,7 +55,7 @@ export const Timeline = ({
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
               <h3
-                className="md:hidden block text-xl lg:text-4xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+                className="md:hidden block text-xl lg:text-4xl mb-4 text-left font-bold text-slate-400 dark:text-neutral-500">
                 {item.title}
               </h3>
               <span className="text-slate-300 lg:text-base text-sm flex flex-col gap-2 text-justify">{item.content}{" "}</span>

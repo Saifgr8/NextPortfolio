@@ -84,8 +84,8 @@ const SkillsComponent = () => {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center relative" id="skills">
       <StarsBg />
-      <div className="text-3xl text-slate-300 z-10 mt-10">The Arsenal {"(Skills)"}</div>
-      <div className="pl-10 flex overflow-x-auto whitespace-nowrap space-x-4 p-4 max-w-full gap-12 bg-transparent">
+      <div className="text-3xl text-slate-300 z-10 mt-10">Skills <span className="text-sm">( scroll right & click )</span></div>
+      <div className="pl-10 flex overflow-x-scroll space-x-4 p-4 max-w-full gap-12 bg-transparent">
         {data.map((item, index) => (
           <Pins key={index} title={item.title} list={item.list} />
         ))}

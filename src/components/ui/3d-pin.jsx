@@ -25,7 +25,7 @@ export const PinContainer = ({
   return (
     <div
       className={cn(
-        "relative group/pin z-50  cursor-pointer",
+        "relative group/pin z-50  mt-10 cursor-pointer",
         containerClassName
       )}
       onMouseEnter={onMouseEnter}
@@ -69,10 +69,10 @@ export const PinPerspectiveSlate = ({ title }) => {
                 {title} profile visits
               </span>
             )} */}
-            {!title && <span className="relative z-20 px-4 text-white text-xl font-bold inline-block py-0.5">
+            {!title && <span className="relative z-20 px-4 text-white lg:text-xl text-base font-bold inline-block py-0.5">
                 Fetching...
               </span>}
-            {title && <span className="relative z-20 px-4 text-white text-xl font-bold inline-block py-0.5">
+            {title && <span className="relative z-20 px-4 text-white lg:text-xl text-sm font-bold inline-block py-0.5">
                 {title} profile visits
               </span>}
 

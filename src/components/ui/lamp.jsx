@@ -14,7 +14,7 @@ export default function LampDemo({ university, degree, year }) {
           duration: 3,
           ease: "easeInOut",
         }}
-        className=" bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-base md:text-4xl font-medium tracking-tight text-transparent lg:text-5xl"
+        className=" bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-base md:text-3xl font-medium tracking-tight text-transparent lg:text-5xl"
       >
         {university} <br /> {degree} <br /> {year}
       </motion.h1>

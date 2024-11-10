@@ -65,18 +65,18 @@ export function LensComponent() {
 
   //max-w-5xl
   return (
-    <div className="w-full relative text-center">
+    <div className="w-full relative text-center lg:pt-10">
       <StarBg />
-      <span className="text-slate-300 text-xl lg:text-3xl absolute inset-0 font-bold z-0">
+      <span className="text-slate-300 text-xl lg:text-3xl absolute  inset-x-2 font-bold z-0">
         Professional media.<br />
-        <span className="text-sm">Click on image to zoom</span>
+        <span className="text-sm">( Click on image to zoom )</span>
       </span>
       {/* Desktop view */}
       <div className="hidden md:flex  w-full flex-row gap-8 justify-around items-center relative z-10 pd-10 ">
         {data.map((item, index) => (
           <div
             key={index}
-            className="w-1/2 max-w-sm h-72 m-10 mt-20 overflow-y-scroll no-scrollbar p-4 bg-gradient-to-br from-yellow-500 via-transparent to-transparent rounded-2xl"
+            className="w-1/2 max-w-sm h-72 m-10 mt-20 hover:overflow-y-scroll p-4 bg-gradient-to-br from-yellow-500 via-transparent to-transparent rounded-2xl"
           >
             <Lens
               hovering={hovering[index]}

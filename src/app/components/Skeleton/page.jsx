@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
 
 const quotesArr = [
@@ -18,39 +18,19 @@ const quotesArr = [
   "Programmer: A machine that turns coffee into code.",
   "A SQL query walks into a bar, sees two tables, and asks: 'Can I join you?'",
 ];
-const loadingMessagesArr = [
-  "Almost there...",
-  "Good things take time!",
-  "Hang tight, magic is happening...",
-  "Hold on, we’re brewing something good!",
-  "Loading... the suspense is real!",
-  "Prepare to be amazed...",
-  "Fetching awesome content just for you!",
-  "Loading... you’re going to love this!",
-  "Making everything just right...",
-  "Hang on, final touches in progress...",
-  "Your experience is worth the wait!",
-];
 
 const Skeleton = () => {
-  const [quoteIndex, setQuoteIndex] = useState(0);
-  const [msgIndex, setMsgIndex] = useState(0);
+  const [quoteIndex, setQuoteIndex] = useState(null);
 
   useEffect(() => {
     setQuoteIndex(Math.floor(Math.random() * quotesArr.length));
-    setMsgIndex(Math.floor(Math.random() * loadingMessagesArr.length));
 
     const quoteInterval = setInterval(() => {
       setQuoteIndex(Math.floor(Math.random() * quotesArr.length));
     }, 4000);
 
-    const msgInterval = setInterval(() => {
-      setMsgIndex(Math.floor(Math.random() * loadingMessagesArr.length));
-    }, 8000);
-
     return () => {
       clearInterval(quoteInterval);
-      clearInterval(msgInterval);
     };
   }, []);
 
@@ -67,12 +47,11 @@ const Skeleton = () => {
       </div>
 
       {/* Loading Message */}
-      <div className="m-4 text-base text-gray-300 italic text-center">
-        {loadingMessagesArr[msgIndex]}
+      <div className="m-4 text-2xl text-gray-300 italic text-center">
+        Loading...
       </div>
     </div>
   );
 };
-
 
 export default Skeleton;
