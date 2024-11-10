@@ -8,8 +8,8 @@ const experienceData = [
     content: (
       <div>
         <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-xl text-sm">MindQube Ltd, Ldn</span>
-          <span className=" lg:text-base text-sm">Jan 2024 - Current</span>
+          <span className="lg:text-xl text-xs underline italic">MindQube Ltd, Ldn.</span>
+          <span className=" lg:text-base text-xs underline italic">Jan 2024 - Current</span>
         </div>
         <ol className="list-decimal">
           <li>
@@ -45,8 +45,8 @@ const experienceData = [
     content: (
       <div>
         <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-xl text-sm">House of Fraser, Ldn</span>
-          <span className=" lg:text-base text-sm">Oct 2022 - Sept 2023</span>
+          <span className="lg:text-base text-xs underline italic">House of Fraser, Ldn</span>
+          <span className="lg:text-base text-xs underline italic">Oct 2022 - Sept 2023</span>
         </div>
         <ol className="list-decimal">
           <li>
@@ -81,8 +81,8 @@ const experienceData = [
     content: (
       <div>
         <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-xl text-sm">Accenture Ltd, Hyd</span>
-          <span className=" lg:text-base text-sm">Feb 2021 - Jul 2022</span>
+          <span className="lg:text-base text-xs underline italic">Accenture Ltd, Hyd.</span>
+          <span className="lg:text-base text-xs underline italic">Feb 2021 - Jul 2022</span>
         </div>
         <ol className="list-decimal">
           <li>

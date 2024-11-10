@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export default function LampDemo({ university, degree, year }) {
+export default function LampDemo({ university, location, degree, year }) {
   return (
     <LampContainer>
       <motion.h1
@@ -16,7 +16,7 @@ export default function LampDemo({ university, degree, year }) {
         }}
         className=" bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-base md:text-3xl font-medium tracking-tight text-transparent lg:text-5xl"
       >
-        {university} <br /> {degree} <br /> {year}
+        {university} <br/> {location} <br /> {degree} <br /> {year}
       </motion.h1>
     </LampContainer>
   );

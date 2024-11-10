@@ -36,11 +36,13 @@ const About = () => {
           <div className="text-white flex flex-row  justify-around gap-4 lg:gap-0 items-center w-full mt-10">
             <LampDemo
               university="University of Bristol"
+              location = "United Kingdom"
               degree="MSc CS"
               year="2022-2024"
             />
             <LampDemo
               university="Osmania University"
+              location = "India"
               degree="BSc EEE"
               year="2016-2020"
             />
