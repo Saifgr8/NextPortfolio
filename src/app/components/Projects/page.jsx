@@ -12,6 +12,7 @@ import { BsChevronCompactRight } from "react-icons/bs";
 import { animate } from "@tsparticles/engine";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { FaYoutube } from "react-icons/fa6";
+import spotImg from "../../../../public/Spot.png";
 
 const Projects = () => {
   return (
@@ -92,10 +93,10 @@ const data = [
   },
   {
     title: "Sunnah Spot",
-    desc: "A health and fitness website",
-    img: "/image",
-    ytLink: "/ytLink",
-    link: "/link",
+    desc: "An ongoing large-scale project offering access to 100,000+ authentic hadiths, a Quran reader with saving options, a Zakat calculator, and weekly quizzes to earn redeemable points for merchandise and discounts. Built with Next.js, it integrates Google Translate and speech features, aiming to provide a seamless experience for a global audience",
+    img: spotImg,
+    ytLink: "",
+    link: "",
   },
 ];
 const StartsBg = () => {
@@ -205,6 +206,12 @@ export function ThreeDCardDemo() {
                 translateX={-40}
                 as={Link}
                 href={data[activeIndex].ytLink}
+                onClick={(e) => {
+                  if (data[activeIndex].ytLink === "") {
+                    e.preventDefault();
+                    window.alert("Coming very soon!");
+                  }
+                }}
                 target="_blank"
                 className="px-4 flex flex-row items-center justify-center gap-2 py-2 rounded-xl bg-red-600 shadow-xl  shadow-red-700 dark:bg-white dark:text-black text-white text-xs font-bold"
               >

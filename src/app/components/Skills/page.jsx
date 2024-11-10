@@ -54,7 +54,7 @@ const Pins = ({ title, list }) => {
       <PinContainerGold title={title}>
         <div className="bg-gradient-to-br rounded-tl-full from-yellow-500 via-transparent to-transparent flex basis-full flex-col tracking-tight text-white sm:basis-1/2 w-[20rem] h-[20rem] ">
           {list.map((item, index) => {
-            const maxPadding = list.length * 35 // Set the maximum padding based on list length
+            const maxPadding = list.length * 35; // Set the maximum padding based on list length
             const paddingDecrement = maxPadding / list.length; // Calculate how much to decrease padding for each item
             const paddingLeft = maxPadding - paddingDecrement * index;
             return (
@@ -82,10 +82,15 @@ const Pins = ({ title, list }) => {
 
 const SkillsComponent = () => {
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center relative" id="skills">
+    <div
+      className="w-full h-screen flex flex-col justify-center items-center relative"
+      id="skills"
+    >
       <StarsBg />
-      <div className="text-3xl text-slate-300 z-10 mt-10">Skills <span className="text-sm">( scroll right & click )</span></div>
-      <div className="pl-10  mt-5 flex overflow-hidden hover:overflow-x-scroll space-x-4 p-4 max-w-full gap-12 bg-transparent z-40" >
+      <div className="text-3xl text-slate-300 z-10 mt-10">
+        Skills <span className="text-sm">( scroll right & click )</span>
+      </div>
+      <div className="pl-10  mt-5 flex lg:overflow-hidden  lg:hover:overflow-x-scroll overflow-x-scroll space-x-4 p-4 max-w-full gap-12 bg-transparent z-40">
         {data.map((item, index) => (
           <Pins key={index} title={item.title} list={item.list} />
         ))}
