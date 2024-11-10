@@ -17,11 +17,11 @@ export function VortexDemo() {
     }
   };
   return (
-    <div className="w-full mx-auto rounded-md  lg:h-[30rem] h-[25rem] overflow-hidden">
+    <div className="w-full mx-auto rounded-md  lg:h-[30rem] h-[20rem] overflow-hidden">
       <Vortex
-        rangeY={1}
+        rangeY={50}
         backgroundColor="black"
-        className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+        className="flex items-center flex-col justify-center px-2 md:px-10 w-full h-full"
       >
         <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
           Did you like what you saw?
