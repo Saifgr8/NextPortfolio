@@ -134,11 +134,14 @@ export function ThreeDCardDemo() {
   //console.log(data[activeIndex]);
 
   return (
-    <div className="relative flex flex-row justify-around items-center w-full h-fit pt-20" id="projects"> 
+    <div
+      className="relative flex flex-row justify-around items-center w-full h-fit pt-20"
+      id="projects"
+    >
       <StartsBg />
       <div className="relative z-10 h-full w-full flex flex-row justify-center items-center">
         <span className="text-slate-300 text-xl font-bold lg:text-3xl absolute -inset-y-4 text-center">
-        Explore My Projects!
+          Explore My Projects!
         </span>
 
         <BsChevronCompactLeft
@@ -164,7 +167,12 @@ export function ThreeDCardDemo() {
             >
               {data[activeIndex]?.desc}
             </CardItem>
-            <CardItem translateZ="100" rotateX={20} rotateZ={-10}  className="w-full mt-4">
+            <CardItem
+              translateZ="100"
+              rotateX={20}
+              rotateZ={-10}
+              className="w-full mt-4"
+            >
               <Image
                 src={data[activeIndex]?.img}
                 height="1000"
@@ -179,9 +187,7 @@ export function ThreeDCardDemo() {
                 translateX={40}
                 as={Link}
                 href={
-                  data[activeIndex].link !== ""
-                    ? data[activeIndex]?.link
-                    : ""
+                  data[activeIndex].link !== "" ? data[activeIndex]?.link : ""
                 }
                 onClick={(e) => {
                   if (data[activeIndex].link === "") {
@@ -199,6 +205,7 @@ export function ThreeDCardDemo() {
                 translateX={-40}
                 as={Link}
                 href={data[activeIndex].ytLink}
+                target="_blank"
                 className="px-4 flex flex-row items-center justify-center gap-2 py-2 rounded-xl bg-red-600 shadow-xl  shadow-red-700 dark:bg-white dark:text-black text-white text-xs font-bold"
               >
                 <span>Demo</span>

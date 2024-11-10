@@ -92,7 +92,7 @@ export function LensComponent() {
             </Lens>
             <div className="py-4 z-20">
               <h2 className="text-2xl font-bold text-slate-300 underline cursor-pointer">
-                <Link href={item?.link}>{item.title}</Link>
+                <Link href={item?.link} target="_blank">{item.title}</Link>
               </h2>
 
               <p className="text-neutral-300 mt-2">{item.desc}</p>
