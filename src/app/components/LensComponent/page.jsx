@@ -34,8 +34,8 @@ const data = [
 
 const StarBg = () => {
   return (
-    <div className=" h-[500px] absolute inset-0 w-full bg-black flex flex-col items-center justify-center overflow-hidden ">
-      <div className="w-full absolute inset-0 h-screen">
+    <div className=" lg:h-[50rem] h-[45rem] absolute inset-0 w-full bg-black flex flex-col items-center justify-center overflow-hidden ">
+      <div className="w-full absolute inset-0 lg:h-[50rem] h-[45rem]">
         <SparklesCore
           id="tsparticlesfullpage.."
           background="transparent"
@@ -65,14 +65,14 @@ export function LensComponent() {
 
   //max-w-5xl
   return (
-    <div className="w-full relative text-center lg:pt-10">
+    <div className="w-full relative text-center lg:pt-10 lg:h-[50rem] h-[45rem] ">
       <StarBg />
-      <span className="text-slate-300 text-xl lg:text-3xl absolute  inset-x-2 font-bold z-0">
+      <span className="text-slate-300 text-xl lg:text-3xl absolute  lg:inset-x-2 inset-20 font-bold z-0">
         Professional media<br />
         <span className="text-sm">( Click on image to zoom )</span>
       </span>
       {/* Desktop view */}
-      <div className="hidden md:flex  w-full flex-row gap-8 justify-around items-center relative z-10 pd-10 ">
+      <div className="hidden md:flex  w-full flex-row gap-8 justify-around items-center relative z-10 pt-40 ">
         {data.map((item, index) => (
           <div
             key={index}
@@ -102,7 +102,7 @@ export function LensComponent() {
       </div>
 
       {/* Mobile view */}
-      <div className="md:hidden flex flex-col items-center relative z-10 pt-10">
+      <div className="md:hidden flex flex-col items-center relative z-10 pt-40">
         <div className="w-full max-w-xs rounded-xl p-4 bg-gradient-to-br from-yellow-500 via-transparent to-transparent m-4 mt-20">
           <Lens
             hovering={hovering[activeIndex]}

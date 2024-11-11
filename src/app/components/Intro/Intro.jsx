@@ -51,7 +51,14 @@ const Intro = () => {
     const getCounts = async () => {
       const data = await trackVisitor();
 
-      if (Array.isArray(data)) {
+      if(data === null){
+        messageTimeOut = setTimeout(() => {
+          setMessage("Please connect to a better network for proper insights.")
+          setShowCount(780)
+        }, 2500);
+      }
+
+      if (data !== null && Array.isArray(data)) {
         const [count, msg] = data;
         setShowCount(count + 750);
         setMessage(msg);

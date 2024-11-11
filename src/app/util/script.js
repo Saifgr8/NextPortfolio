@@ -13,26 +13,32 @@ import {
 const getIp = async () => {
   const res = await fetch("https://api.ipify.org?format=json");
   const data = await res.json();
+  //console.log(data);
   return data.ip;
 };
 //getData
 let token = "05ed8f6ab1a4fc";
 const getLocation = async (ip) => {
-  const res = await fetch(`https://ipinfo.io/${ip}?token=${token}`);
-  const data = await res.json();
-
-  return {
-    city: data?.city,
-    region: data?.region,
-    country: data?.country,
-    loc: data?.loc,
-  };
+  try {
+    const res = await fetch(`https://ipinfo.io/${ip}?token=${token}`);
+    const data = await res.json();
+    return {
+      city: data?.city,
+      region: data?.region,
+      country: data?.country,
+      loc: data?.loc,
+    };
+  } catch (error) {
+    console.error("Error fetching location:", error);
+    return ip;
+  }
 };
 
 let address = [];
 const outputData = async () => {
   const ip = await getIp();
   const location = await getLocation(ip);
+  console.log(location);
 
   if (location) {
     address.push(location);
@@ -57,8 +63,8 @@ export const trackVisitor = async () => {
       await updateDoc(visitorRef, {
         Visitor: arrayUnion({
           ipadress: ip,
-          Address: `${addressData[0].city}, ${addressData[0].region}, ${addressData[0].country}`,
-          cordinates: addressData[0].loc,
+          Address: `${addressData[0]?.city}, ${addressData[0]?.region}, ${addressData[0]?.country}`,
+          cordinates: addressData[0]?.loc,
         }),
         date: new Date(),
       });
@@ -76,8 +82,8 @@ export const trackVisitor = async () => {
           Visitor: [
             {
               ipadress: ip.toString(),
-              Address: `${addressData[0].city}, ${addressData[0].region}, ${addressData[0].country}`,
-              coordinates: addressData[0].loc,
+              Address: `${addressData[0]?.city}, ${addressData[0]?.region}, ${addressData[0]?.country}`,
+              coordinates: addressData[0]?.loc,
             },
           ],
           date: new Date(),

@@ -23,7 +23,7 @@ export function VortexDemo() {
         backgroundColor="black"
         className="flex items-center flex-col justify-center px-2 md:px-10 w-full h-full"
       >
-        <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
+        <h2 className="text-white text-2xl md:text-4xl lg:text-5xlfont-bold text-center">
           Like what you saw?
         </h2>
         <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">

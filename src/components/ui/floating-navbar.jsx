@@ -35,7 +35,7 @@ export const FloatingNav = ({ navItems, className }) => {
           duration: 0.5,
         }}
         className={cn(
-          "flex max-w-fit shadow-xl shadow-yellow-500 bg-transparent  fixed top-3 inset-x-0 mx-auto  dark:border-white/[0.2] rounded-full dark:bg-black z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
+          "flex max-w-fit  shadow-xl shadow-yellow-500 bg-gradient-to-b from-transparent via-black to-yellow-300 fixed top-3 inset-x-0 mx-auto  dark:border-white/[0.2] rounded-full dark:bg-black z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
           className
         )}
       >

@@ -58,7 +58,7 @@ export const Timeline = ({
                 className="md:hidden block text-xl lg:text-4xl mb-4 text-left font-bold text-slate-400 dark:text-neutral-500">
                 {item.title}
               </h3>
-              <span className="text-slate-300 lg:text-base text-sm flex flex-col gap-2 text-justify">{item.content}{" "}</span>
+              <span className="text-slate-300 lg:text-base text-sm flex flex-col gap-2 lg:text-justify">{item.content}{" "}</span>
             </div>
           </div>
         ))}
