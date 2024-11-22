@@ -10,7 +10,7 @@ import img2 from "../../../../public/OSM.avif";
 
 const StarsBg = () => {
   return (
-    <div className="h-screen relative w-full  bg-black flex flex-col items-center justify-center overflow-hidden ">
+    <div className="min-h-screen relative w-full  bg-black flex flex-col items-center justify-center overflow-hidden ">
       <div className="w-full absolute inset-0 h-screen z-0">
         <SparklesCore
           id="tsparticlesfullpage..."
@@ -52,14 +52,14 @@ export function AnimatedTestimonialsDemo() {
 
 const About = () => {
   return (
-    <div className="w-full" id="about">
+    <div className="w-full " id="about">
       <div className="relative flex flex-col bg-transparent w-full">
         <StarsBg />
         <div className="absolute inset-0 flex flex-col gap-5 items-center justify-center w-full h-full">
           <span className="absolute  inset-y-7 text-slate-300 bg-transparent w-full text-center text-xl lg:text-3xl lg:pt-0 sm:pt-10 font-bold">
             Academics
           </span>
-          <div className="h-fit lg:mt-10 mt-24">
+          <div className="h-full lg:mt-10 mt-24">
             <AnimatedTestimonialsDemo />
           </div>
         </div>

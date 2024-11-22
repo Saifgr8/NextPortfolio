@@ -7,11 +7,11 @@ const experienceData = [
     title: "Graduate Software Developer",
     content: (
       <div>
-        <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-xl text-sm underline italic">MindQube Ltd, Ldn.</span>
-          <span className=" lg:text-base text-sm underline italic lg:mr-1 mr-4">Jan 2024 - Current</span>
+        <div className=" font-bold flex flex-row justify-between items-center text-justify">
+          <span className="lg:text-xl md:text-sm text-xs underline italic">MindQube Ltd, Ldn.</span>
+          <span className=" lg:text-base md:text-sm text-xs underline italic lg:mr-1 mr-4">Jan 2024 - Current</span>
         </div>
-        <ol className="list-decimal">
+        <ol className="list-decimal  text-xs md:text-sm lg:text-lg">
           <li>
             <p>
               Built responsive, user-focused applications with React and Spring
@@ -45,10 +45,10 @@ const experienceData = [
     content: (
       <div>
         <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-base text-sm underline italic">House of Fraser,Ldn</span>
-          <span className="lg:text-base text-sm underline italic lg:mr-1 mr-4">Oct 2022 - Sept 2023</span>
+          <span className="lg:text-xl md:text-sm text-xs  text-left underline italic">House of Fraser,Ldn</span>
+          <span className="lg:text-xl md:text-sm text-xs  underline italic ">Oct 2022 - Sept 2023</span>
         </div>
-        <ol className="list-decimal">
+        <ol className="list-decimal text-xs md:text-sm lg:text-lg">
           <li>
             <p>
               Provided outstanding customer service, assisting with purchases
@@ -81,10 +81,10 @@ const experienceData = [
     content: (
       <div>
         <div className="text-xl font-bold flex flex-row justify-between text-justify">
-          <span className="lg:text-base text-sm underline italic">Accenture Ltd, Hyd.</span>
-          <span className="lg:text-base text-sm underline italic lg:mr-1 mr-4">Feb 2021 - Jul 2022</span>
+          <span className="lg:text-xl md:text-sm text-xs  underline italic">Accenture Ltd, Hyd.</span>
+          <span className="lg:text-xl md:text-sm text-xs  underline italic ">Feb 2021 - Jul 2022</span>
         </div>
-        <ol className="list-decimal">
+        <ol className="list-decimal text-xs md:text-sm lg:text-lg">
           <li>
             <p>
               Streamlined HR functions by designing and optimizing business

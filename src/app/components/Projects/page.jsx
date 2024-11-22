@@ -13,6 +13,7 @@ import { animate } from "@tsparticles/engine";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { FaYoutube } from "react-icons/fa6";
 import spotImg from "../../../../public/Spot.png";
+import tic from "../../../../public/tic.png";
 
 const Projects = () => {
   return (
@@ -38,6 +39,30 @@ const data = [
     img: kyfImg,
     ytLink: "https://www.youtube.com/watch?v=KcXTxtHXmxU&t=9s",
     link: "https://kyf-frontend.azurewebsites.net/app",
+  },
+  {
+    title: "Tic Tac Twist",
+    desc: (
+      <div>
+        Tic Tac Twist reimagines classic Tic Tac Toe with an AI opponent,
+        special moves, and evolving board sizes. Built with <span className="font-bold">NextJs</span>,{" "} it features
+        a unique point system where players can earn special abilities, like
+        overriding opponent moves or playing extra turns. The game evolves
+        dynamically, transitioning from a 3x3 to larger grids, adding a layer of
+        complexity and strategy that keeps players engaged and challenges their
+        decision-making skills. best practices like.
+      </div>
+    ),
+    img: tic,
+    ytLink: "",
+    link: "https://tictwist-saifgr8s-projects.vercel.app/",
+  },
+  {
+    title: "Sunnah Spot",
+    desc: "An ongoing large-scale project offering access to 100,000+ authentic hadiths, a Quran reader with saving options, a Zakat calculator, and weekly quizzes to earn redeemable points for merchandise and discounts. Built with Next.js, it integrates Google Translate and speech features, aiming to provide a seamless experience for a global audience",
+    img: spotImg,
+    ytLink: "",
+    link: "",
   },
   {
     title: "Card Customiser",
@@ -91,13 +116,6 @@ const data = [
     ytLink: "https://www.youtube.com/watch?v=F4Xr86BlDuc",
     link: "",
   },
-  {
-    title: "Sunnah Spot",
-    desc: "An ongoing large-scale project offering access to 100,000+ authentic hadiths, a Quran reader with saving options, a Zakat calculator, and weekly quizzes to earn redeemable points for merchandise and discounts. Built with Next.js, it integrates Google Translate and speech features, aiming to provide a seamless experience for a global audience",
-    img: spotImg,
-    ytLink: "",
-    link: "",
-  },
 ];
 const StartsBg = () => {
   return (
@@ -133,7 +151,7 @@ export function ThreeDCardDemo() {
   };
 
   //console.log(data[activeIndex]);
-
+  console.log(data.length);
   return (
     <div
       className="relative flex flex-row justify-around items-center w-full h-fit pt-20"
@@ -148,16 +166,18 @@ export function ThreeDCardDemo() {
           </span>
         </span>
 
-        <BsChevronCompactLeft
-          style={{ color: "#eab308" }}
-          className={`lg:h-32 lg:w-32 h-20 w-20 ${
-            activeIndex > 0
-              ? "animate-bounce cursor-pointer"
-              : "animate-none cursor-not-allowed"
-          } `}
-          onClick={handleLeftClick}
-        />
-        <CardContainer className="inter-var mt-10">
+        {activeIndex !== 0 && (
+          <BsChevronCompactLeft
+            style={{ color: "#eab308" }}
+            className={`lg:h-32 lg:w-32 h-20 w-20 ${
+              activeIndex > 0
+                ? "animate-bounce cursor-pointer"
+                : "animate-none cursor-not-allowed"
+            } `}
+            onClick={handleLeftClick}
+          />
+        )}
+        <CardContainer className="inter-var mt-10 w-11/12">
           <CardBody className="mt-10 border-4 border-slate-300 bg-gradient-to-br from-transparent via-transparent to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[400px] lg:h-[500px] lg:overflow-hidden lg:hover:overflow-y-scroll overflow-y-scroll rounded-xl p-6 ">
             <CardItem
               translateZ="50"
@@ -185,54 +205,56 @@ export function ThreeDCardDemo() {
                 alt="thumbnail"
               />
             </CardItem>
-            <div className="flex justify-between items-center mt-10">
-              <CardItem
-                translateZ={20}
-                translateX={40}
-                as={Link}
-                href={
-                  data[activeIndex].link !== "" ? data[activeIndex]?.link : ""
-                }
-                onClick={(e) => {
-                  if (data[activeIndex].link === "") {
-                    e.preventDefault();
-                    window.alert("Unavaliable right now.");
+            <div className="flex justify-between items-center mt-10 mr-2 w-full">
+              <div className="flex flex-row items-center justify-between w-full">
+                <CardItem
+                  as={Link}
+                  href={
+                    data[activeIndex].link !== "" ? data[activeIndex]?.link : ""
                   }
-                }}
-                target="__blank"
-                className="px-4 py-2 rounded-xl text-sm text-blue-500 font-normal dark:text-white"
-              >
-                <div>Try now →</div>
-              </CardItem>
-              <CardItem
-                translateZ={20}
-                translateX={-40}
-                as={Link}
-                href={data[activeIndex].ytLink}
-                onClick={(e) => {
-                  if (data[activeIndex].ytLink === "") {
-                    e.preventDefault();
-                    window.alert("Coming very soon!");
-                  }
-                }}
-                target="_blank"
-                className="px-4 flex flex-row items-center justify-center gap-2 py-2 rounded-xl bg-red-600 shadow-xl  shadow-red-700 dark:bg-white dark:text-black text-white text-xs font-bold"
-              >
-                <span>Demo</span>
-                <FaYoutube />
-              </CardItem>
+                  onClick={(e) => {
+                    if (data[activeIndex].link === "") {
+                      e.preventDefault();
+                      window.alert("Unavaliable right now.");
+                    }
+                  }}
+                  target="__blank"
+                  className="px-4 py-2 rounded-xl text-sm text-blue-500 font-normal dark:text-white"
+                >
+                  <div>Try now →</div>
+                </CardItem>
+                <CardItem
+                  translateZ={20}
+                  translateX={-40}
+                  as={Link}
+                  href={data[activeIndex].ytLink}
+                  onClick={(e) => {
+                    if (data[activeIndex].ytLink === "") {
+                      e.preventDefault();
+                      window.alert("Coming very soon!");
+                    }
+                  }}
+                  target="_blank"
+                  className="px-4 flex flex-row items-center justify-center gap-2 py-2 rounded-xl bg-red-600 shadow-xl  shadow-red-700 dark:bg-white dark:text-black text-white text-xs font-bold"
+                >
+                  <span>Demo</span>
+                  <FaYoutube />
+                </CardItem>
+              </div>
             </div>
           </CardBody>
         </CardContainer>
-        <BsChevronCompactRight
-          style={{ color: "#eab308" }}
-          className={`lg:h-32 lg:w-32 h-20 w-20 ${
-            activeIndex < data.length - 1
-              ? "animate-bounce cursor-pointer"
-              : "animate-none cursor-not-allowed"
-          }`}
-          onClick={handleRightClick}
-        />
+        {activeIndex !== data.length - 1 && (
+          <BsChevronCompactRight
+            style={{ color: "#eab308" }}
+            className={`lg:h-32 lg:w-32 h-20 w-20 ${
+              activeIndex < data.length - 1
+                ? "animate-bounce cursor-pointer"
+                : "animate-none cursor-not-allowed"
+            }`}
+            onClick={handleRightClick}
+          />
+        )}
       </div>
     </div>
   );
